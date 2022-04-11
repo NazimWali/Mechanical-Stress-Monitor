@@ -1,0 +1,107 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Nazim Windows, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\nazim\Documents\Courses\Keil_Pgrms\Embedded\SD\SD.uvprojx
+Project File Date:  03/23/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+SD.c(32): warning: unused variable 'resis2' [-Wunused-variable]
+                double resis2;
+                       ^
+SD.c(33): warning: unused variable 'resis' [-Wunused-variable]
+                double resis;
+                       ^
+SD.c(46): warning: unused variable 'r0' [-Wunused-variable]
+                double r0 = 350;
+                       ^
+SD.c(27): warning: unused variable 'result2' [-Wunused-variable]
+                double result2;
+                       ^
+SD.c(44): warning: unused variable 'knownres' [-Wunused-variable]
+                int knownres = 119;
+                    ^
+SD.c(29): warning: unused variable 'voltage2' [-Wunused-variable]
+                double voltage2;
+                       ^
+SD.c(156): warning: 'sprintf' will always overflow; destination buffer has size 4, but format string expands to at least 9 [-Wfortify-source]
+                                sprintf(conv, "%f", resis1);                                    //Use sprintf to store int results in a char array
+                                ^
+SD.c(169): warning: 'sprintf' will always overflow; destination buffer has size 5, but format string expands to at least 9 [-Wfortify-source]
+                                sprintf(conv2, "%f", strain);                                   //Store in char array
+                                ^
+SD.c(230): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOA->MODER &= ~0x0000CC00;    /* clear pin mode */
+                 ~~ ^~~~~~~~~~~
+SD.c(235): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->MODER &= ~0x0000FF00;    /* clear pin mode */
+                 ~~ ^~~~~~~~~~~
+SD.c(258): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+    LCD_nibble_write(command << 4, 0);      /* then lower nibble */
+    ~~~~~~~~~~~~~~~~ ~~~~~~~~^~~~
+SD.c(268): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+    LCD_nibble_write(data << 4, RS);        /* then lower nibble */
+    ~~~~~~~~~~~~~~~~ ~~~~~^~~~
+SD.c(287): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+13 warnings generated.
+compiling SD.c...
+linking...
+Program Size: Code=7552 RO-data=648 RW-data=0 ZI-data=1632  
+".\Objects\SD.axf" - 0 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\nazim\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\nazim\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F446xx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f446xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
